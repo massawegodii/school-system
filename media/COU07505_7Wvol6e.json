@@ -1,0 +1,10 @@
+{
+        "model": "main.result",
+        "pk": 1,
+        "fields": {
+            "student": "2002230227759",
+            "course_code": "COU07505",
+            "marks": 50,
+            "attendence": 5
+        }
+    },

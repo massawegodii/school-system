@@ -1,0 +1,58 @@
+{% extends 'main/main_home_student.html' %}
+{% load crispy_forms_tags %}
+
+<{% block content %}
+
+<div class="table-responsive pt-5 " >
+  <table class="table table-bordered table-hover" style="width:98%"   >
+      <thead class = "thead">
+        <tr>
+          <th data-field="name">
+            Name
+          </th>
+          <th data-field="cc">
+            Course Code
+          </th>
+          <th data-field="ca">
+            CA
+          </th>
+          <th data-field="fe">
+            FE
+          </th>
+          <th data-field="cred">
+            Credit
+          </th>
+          <th data-field="cat">
+            Category
+          </th>
+          <th data-field="che">
+            Checkbox
+          </th>
+          <th data-field="sel">
+            Selected
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <center><h4>#Semester Module</h4></center>
+        {% for course in courses %}
+          <tr>
+            <td>{{ course.name }}</td>
+            <td>{{ course.course_id }}</td>
+            <td>{{ course.course_work }}</td>
+            <td>{{ course.final_exam }}</td>
+            <td>{{ course.credit }}</td>
+            <td>{{ course.category }}</td>
+            <td><input type="checkbox" checked>
+            </td>
+            <td>{{ course.select_option }}</td>
+            
+           
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+  
+{% endblock %}

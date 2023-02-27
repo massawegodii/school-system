@@ -1,0 +1,20 @@
+{% extends 'main/main_home.html' %}
+{% load crispy_forms_tags %}
+      <{% block content %}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <div class="row my-4">
+          <div class="col-md-8 offset-md-2">
+              <div class="border p-4 bg-white">
+            <center><h2 class="card-title">Module Registration</h2></center><br><br>
+                <form method="POST">
+                  {% csrf_token %}
+                  <div class="container">
+                  {{ form.as_p }}
+                  </div>
+                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>      
+    </body>  
+{% endblock %}
